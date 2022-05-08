@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 
-const pages = [
-    { name: 'About', ref: '#about' },
-    { name: 'Projects', ref: '#projects' },
-    { name: 'Resume', ref: '#resume' },
-    { name: 'Contact', ref: '#contact'}
-];
-
+function Nav() {
+    return (
+        <header>
+            <nav>
+            <ul className="flex-row">
+                <li className="mx-2">
+                    <a href="#about">
+                        ABOUT ME
+                    </a>
+                </li>
+                <li className="mx-2">
+                    <a href='#projects'>PROJECTS</a>
+                </li>
+                <li className="mx-2">
+                    <a>RESUME</a>
+                </li>
+                <li className="mx-2">
+                    <a>CONTACT</a>
+                </li>
+            </ul>
+            </nav>
+        </header>
+    )
+}
 export default Nav;
