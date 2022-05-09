@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import photo1 from '../assets/projects/Code Quiz.png';
 import photo2 from '../assets/projects/E-Commerce Flow.png';
 import photo3 from '../assets/projects/README Generator.png';
 import photo4 from '../assets/projects/My Social Network API.png';
 
 function Projects() {
+    const [projectState, setProjectState] = useState(false);
+
     const projectOne = {
         name: 'Code Quiz',
         description: "A timed multiple choice quiz that allows the user to save their score.",
@@ -26,7 +28,7 @@ function Projects() {
     };
 
     return (
-        <section>
+        <section className="project-list">
             <h1>{projectOne.name}</h1>
             <p>{projectOne.description}</p>
             <div className="flex-row">

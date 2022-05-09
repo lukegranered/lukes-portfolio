@@ -2,15 +2,32 @@ import React, { useState } from 'react';
 import About from './components/About';
 import Nav from './components/Nav';
 import Projects from './components/Projects';
+import Footer from './components/Footer';
 
 function App() {
+  const [aboutSelected, setAboutSelected] = useState(true);
+  const [projectSelected, setProjectSelected] = useState(false);
+
   return (
     <div >
-      <Nav/>
+      <Nav
+      aboutSelected={aboutSelected}
+      setAboutSelected={setAboutSelected}
+      projectSelected={projectSelected}
+      setProjectSelected={setProjectSelected}
+      >
+
+      </Nav>
       <main>
-        <Projects/>
-        <About/>
+      {!projectSelected ? (
+        <>
+          <About></About>
+        </>
+      ) : (
+        <Projects></Projects>
+      )}
       </main>
+      <Footer></Footer>
     </div>
   );
 }
