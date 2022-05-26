@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import photo1 from '../assets/projects/Code Quiz.png';
 import photo2 from '../assets/projects/E-Commerce Flow.png';
 import photo3 from '../assets/projects/README Generator.png';
-import photo4 from '../assets/projects/My Social Network API.png';
+import photo4 from '../assets/projects/Video-Dev.png';
 
 function Projects() {
     const [projectState, setProjectState] = useState(false);
@@ -23,8 +23,8 @@ function Projects() {
     };
 
     const projectFour = {
-        name: 'My Social Network API',
-        description: "A simple backend for a social networking application using Express and MongoDB."
+        name: 'Video-Dev',
+        description: "A Developer based social media application."
     };
 
     return (
@@ -68,7 +68,7 @@ function Projects() {
             <h1>{projectFour.name}</h1>
             <p>{projectFour.description}</p>
             <div className="flex-row">
-                <a href="https://github.com/lukegranered/my-social-network-api">
+                <a href="https://evening-scrubland-24063.herokuapp.com/">
                     <img
                         src={photo4}
                         alt="Social Network Photo"
